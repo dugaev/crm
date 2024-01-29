@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="256px" height="289px" viewBox="0 0 256 289" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
-    <title>tauri</title>
+    <title>logo</title>
     <g>
         <path d="M178.496537,104.930808 C178.496537,120.084789 166.211808,132.369518 151.057827,132.369518 C135.903846,132.369518 123.619117,120.084789 123.619117,104.930808 C123.619117,89.7768271 135.903846,77.4920982 151.057827,77.4920982 C166.211808,77.4920982 178.496537,89.7768271 178.496537,104.930808 L178.496537,104.930808 Z" fill="#8500f6"></path>
         <circle fill="#8500f6" transform="translate(104.910905, 183.505296) rotate(180.000000) translate(-104.910905, -183.505296) " cx="104.910905" cy="183.505296" r="27.43871"></circle>

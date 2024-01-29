@@ -13,7 +13,7 @@ interface Props extends PrimitiveProps {
 }
 
 withDefaults(defineProps<Props>(), {
-  variant: "default",
+  variant: "secondary",
   size: "default",
   as: "button",
 });
