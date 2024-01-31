@@ -74,7 +74,7 @@ const onSubmit = handleSubmit((values) => {
   </div>
   <form v-if="isOpenForm" @submit="onSubmit" class="form">
     <UiInput
-      placeholder="Name"
+      placeholder="Task Name"
       v-model="name"
       v-bind="nameAttrs"
       type="text"

@@ -1,3 +1,9 @@
+<!-- 
+
+    TODO: 
+    [] - fix comments part
+ -->
+
 <script lang="ts" setup>
 const store = useDealSlideStore();
 
