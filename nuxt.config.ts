@@ -2,7 +2,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: [
     "@nuxt/image",
-    "@nuxtjs/tailwindcss",
+    "@nuxt/ui",
     "shadcn-nuxt",
     [
       "@nuxtjs/google-fonts",
@@ -17,6 +17,12 @@ export default defineNuxtConfig({
     ],
     "nuxt-icon",
     "@pinia/nuxt",
+    [
+      "@vee-validate/nuxt",
+      {
+        autoImports: true,
+      },
+    ],
   ],
   shadcn: {
     prefix: "Ui",
