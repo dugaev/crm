@@ -8,7 +8,7 @@ const store = useDealSlideStore();
 <template>
   <div class="border-border bg-black/20 rounded p-3">
     <div class="uppercase bold text-xl mb-4">About deal:</div>
-    <KanbanSlideoverLabel label-text="Name">
+    <KanbanSlideoverLabel label-text="Task Name">
       <h2>{{ store.card?.name }}</h2>
     </KanbanSlideoverLabel>
     <KanbanSlideoverLabel label-text="Sum">
@@ -22,7 +22,7 @@ const store = useDealSlideStore();
     <KanbanSlideoverLabel label-text="Client">
       {{ store.card?.companyName }}
     </KanbanSlideoverLabel>
-    <KanbanSlideoverLabel label-text="Name">
+    <KanbanSlideoverLabel label-text="Created">
       {{ dayjs(store.card?.$createdAt).format("DD MMMM YYYY") }}
     </KanbanSlideoverLabel>
   </div>
