@@ -25,5 +25,6 @@ const store = useDealSlideStore();
     <KanbanSlideoverLabel label-text="Created">
       {{ dayjs(store.card?.$createdAt).format("DD MMMM YYYY") }}
     </KanbanSlideoverLabel>
+    <!-- <UiButton class="mt-8"> Delete </UiButton> -->
   </div>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useQuery } from "@tanstack/vue-query";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/vue-query";
 import { COLLECTION_CUSTOMERS, DB_ID } from "~/app.constants";
 import type { ICustomer } from "~/types/deals.types";
 
@@ -7,6 +7,20 @@ useSeoMeta({
   title: "Customers | CRM System",
 });
 
+const queryClient = useQueryClient();
+
+const deleteCustomer = async (customerId: string) => {
+  await DB.deleteDocument(DB_ID, COLLECTION_CUSTOMERS, customerId);
+  queryClient.invalidateQueries(["customers"]);
+};
+
+const { mutate: deleteCustomerMutation } = useMutation({
+  mutationKey: ["deleteCustomer"],
+  mutationFn: (customerId: string) => deleteCustomer(customerId),
+  onSuccess: () => {
+    queryClient.invalidateQueries(["customers"]);
+  },
+});
 const { data: customers, isLoading } = useQuery({
   queryKey: ["customers"],
   queryFn: () => DB.listDocuments(DB_ID, COLLECTION_CUSTOMERS),
@@ -50,6 +64,11 @@ const { data: customers, isLoading } = useQuery({
           </UiTableCell>
           <UiTableCell>
             {{ customer.from_source }}
+          </UiTableCell>
+          <UiTableCell>
+            <UiButton @click="() => deleteCustomerMutation(customer.$id)">
+              Delete
+            </UiButton>
           </UiTableCell>
         </UiTableRow>
       </UiTableBody>
