@@ -8,7 +8,19 @@ import { generateColumnStyle } from "~/components/kanban/generateGradient";
 import type { ICard, IColumn } from "~/components/kanban/kanban.types";
 import { useDealSlideStore } from "~/store/deal-slide.store";
 import type { EnumStatus } from "~/types/deals.types";
+import { useAuthStore, useIsLoadingStore } from "~/store/auth.store";
 
+const authStore = useAuthStore();
+const isLoadingStore = useIsLoadingStore();
+const router = useRouter();
+
+const logout = async () => {
+  isLoadingStore.set(true);
+  await account.deleteSession("current");
+  authStore.clear();
+  await router.push("/login");
+  isLoadingStore.set(false);
+};
 useSeoMeta({
   title: "Home | CRM System",
 });
@@ -52,7 +64,17 @@ function handleDrop(targetColumn: IColumn) {
 
 <template>
   <div class="p-10">
-    <h1 class="font-bold text-2xl mb-10">Dashboard</h1>
+    <div class="flex justify-between">
+      <h1 class="font-bold text-2xl mb-10">Dashboard</h1>
+      <button
+        @click="logout"
+        class="absolute right-10 transition-colors hover:text-[#8500f6] border py-3 px-6 rounded-lg"
+      >
+        <Icon name="line-md:log-out" size="26" class="mb-1" />
+        Log Out
+      </button>
+    </div>
+
     <div v-if="isLoading">Loading...</div>
     <div v-else>
       <div class="grid grid-cols-5 gap-16">
