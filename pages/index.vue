@@ -52,7 +52,7 @@ function handleDrop(targetColumn: IColumn) {
 
 <template>
   <div class="p-10">
-    <h1 class="font-bold text-2xl mb-10">CRM System</h1>
+    <h1 class="font-bold text-2xl mb-10">Dashboard</h1>
     <div v-if="isLoading">Loading...</div>
     <div v-else>
       <div class="grid grid-cols-5 gap-16">

@@ -26,6 +26,6 @@ export interface IDeal extends IBaseField {
   name: string;
   price: number;
   status: EnumStatus;
-  customer: ICustomer;
+  customers: ICustomer;
   comments: IComment[];
 }

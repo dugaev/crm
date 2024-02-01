@@ -2,7 +2,7 @@
 import dayjs from "dayjs";
 import type { IDeal } from "~/types/deals.types";
 import { useComments } from "./UseComments";
-import { useCreateComment } from "./useCommentCreate";
+import { useCreateComment } from "./useCreateComment";
 
 const { data, refetch, isLoading } = useComments();
 const { commentRef, writeComment } = useCreateComment({ refetch });
@@ -36,3 +36,4 @@ const card = data as unknown as IDeal;
     </div>
   </div>
 </template>
+./useCreateComment

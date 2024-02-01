@@ -24,5 +24,5 @@ export function useCreateComment({ refetch }: { refetch: () => void }) {
     mutate();
   };
 
-  return { commentRef, writeComment };
+  return { writeComment, commentRef };
 }
