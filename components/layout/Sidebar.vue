@@ -16,8 +16,8 @@ const logout = async () => {
 
 <template>
   <aside class="px-8 py-8 bg-sidebar h-full w-full relative">
-    <NuxtLink to="/" class="mb-10 block">
-      <NuxtImg src="/logo.svg" alt="" width="90px" class="mx-auto" />
+    <NuxtLink to="/" class="mb-20 block">
+      <NuxtImg src="/logo.svg" alt="" width="120px" class="mx-auto" />
     </NuxtLink>
     <button
       @click="logout"

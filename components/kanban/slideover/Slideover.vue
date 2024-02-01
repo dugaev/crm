@@ -1,7 +1,10 @@
 <!-- 
 
     TODO: 
+    [x] - add delete btn for customers
     [] - fix comments part
+    [] - add delete btn for deals
+    [] - add content for other pages
  -->
 
 <script lang="ts" setup>
