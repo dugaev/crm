@@ -48,7 +48,7 @@ const register = async () => {
 
 <template>
   <div class="flex items-center justify-center min-h-screen w-full">
-    <div class="rounded bg-sidebar w-1/4 p-5">
+    <div class="rounded bg-sidebar lg:w-1/4 p-5">
       <h1 class="text-2xl font-bold text-center mb-5">Login</h1>
 
       <form>
@@ -70,7 +70,7 @@ const register = async () => {
           class="mb-3"
           v-model="nameRef"
         />
-        <div class="flex items-center justify-center gap-5">
+        <div class="flex items-center justify-center gap-5 pt-3 lg:pt-0">
           <UiButton type="button" @click="login">Login</UiButton>
           <UiButton type="button" @click="register">Sign Up</UiButton>
         </div>

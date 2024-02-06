@@ -33,4 +33,9 @@ onMounted(async () => {
   display: grid;
   grid-template-columns: 1fr 6fr;
 }
+@media screen and (max-width: 600px) {
+  .grid {
+    display: block;
+  }
+}
 </style>

@@ -64,11 +64,11 @@ function handleDrop(targetColumn: IColumn) {
 
 <template>
   <div class="p-10">
-    <div class="flex justify-between">
+    <div class="flex flex-col lg:flex lg:justify-between">
       <h1 class="font-bold text-2xl mb-10">Dashboard</h1>
       <button
         @click="logout"
-        class="absolute right-10 transition-colors hover:text-[#8500f6] border py-3 px-6 rounded-lg"
+        class="hidden mb-[20px] lg:block lg:mb-0 lg:absolute lg:right-10 transition-colors hover:text-[#8500f6] border py-3 px-6 rounded-lg"
       >
         <Icon name="line-md:log-out" size="26" class="mb-1" />
         Log Out
@@ -77,13 +77,13 @@ function handleDrop(targetColumn: IColumn) {
 
     <div v-if="isLoading">Loading...</div>
     <div v-else>
-      <div class="grid grid-cols-5 gap-16">
+      <div class="grid grid-cols-1 lg:grid lg:grid-cols-5 lg:gap-16">
         <div
           v-for="(column, index) in data"
           :key="column.id"
           @dragover="handleDragOver"
           @drop="() => handleDrop(column)"
-          class="min-h-screen"
+          class="lg:min-h-screen"
         >
           <div
             class="rounded bg-slate-700 py-1 px-5 mb-2 text-center"
