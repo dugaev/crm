@@ -61,13 +61,13 @@ const onSubmit = handleSubmit((values) => {
       <Icon
         v-if="isOpenForm"
         name="radix-icons:arrow-up"
-        class="fade-in-100 fade-out-0"
+        class="fade-in-100 fade-out-0 -z-10"
         size="35"
       />
       <Icon
         v-else
         name="radix-icons:plus-circled"
-        class="fade-in-100 fade-out-0"
+        class="fade-in-100 fade-out-0 -z-10"
         size="35"
       />
     </button>

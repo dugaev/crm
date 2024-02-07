@@ -111,7 +111,7 @@ function handleDrop(targetColumn: IColumn) {
                 <div>Company</div>
                 {{ card.companyName }}</UiCardContent
               >
-              <UiCardFooter>
+              <UiCardFooter class="-z-10">
                 {{ dayjs(card.$createdAt).format("DD MMMM YYYY") }}
               </UiCardFooter>
             </UiCard>

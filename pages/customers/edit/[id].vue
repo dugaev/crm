@@ -62,7 +62,7 @@ const onSubmit = handleSubmit((values) => {
 
 <template>
   <div class="p-10">
-    <h1 class="font-bold text-2xl mb-10">
+    <h1 class="font-bold text-2xl mb-10 text-center">
       Edit Customer: {{ (data as unknown as ICustomerFormState)?.name }}
     </h1>
     <form @submit="onSubmit" class="form">

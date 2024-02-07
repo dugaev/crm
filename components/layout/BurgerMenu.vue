@@ -14,7 +14,7 @@ const closeMenu = () => {
 </script>
 
 <template>
-  <div class="absolute top-[148px] left-2">
+  <div class="absolute top-[148px] left-2 z-50">
     <button @click="toggleMenu" class="block lg:hidden">
       <svg
         class="w-10 h-10 text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700"
@@ -34,7 +34,7 @@ const closeMenu = () => {
 
     <transition name="slide-fade">
       <div v-show="isMenuOpen" class="lg:hidden">
-        <nav class="bg-black z-40 shadow-lg rounded-lg">
+        <nav class="bg-black shadow-lg rounded-lg">
           <div class="p-8">
             <NuxtLink
               class="flex items-center py-1 mr-4 px-2 rounded-lg w-full hover:bg-gray-700 hover:shadow transition-all mb-2.5"
