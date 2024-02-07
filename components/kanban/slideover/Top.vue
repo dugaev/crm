@@ -1,7 +1,9 @@
 <script lang="ts" setup>
 import dayjs from "dayjs";
 import { useDealSlideStore } from "~/store/deal-slide.store";
-
+import { ArrowLeftIcon } from "@radix-icons/vue";
+import { RouterLink } from "vue-router";
+const isClicked = console.log("clicked");
 const store = useDealSlideStore();
 </script>
 

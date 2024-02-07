@@ -6,7 +6,7 @@ useSeoMeta({
 
 <template>
   <div>
-    <h1 class="p-7 lg:p-24 text-slate-500 text-2xl font-bold">
+    <h1 class="p-7 lg:p-24 text-slate-500 text-2xl font-bold text-center">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
       quidem deserunt deleniti corrupti omnis illo? Quae molestias non qui,
       consequuntur libero saepe tempore animi. Totam fugiat placeat vel aliquid

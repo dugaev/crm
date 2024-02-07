@@ -64,7 +64,7 @@ function handleDrop(targetColumn: IColumn) {
 
 <template>
   <div class="p-10">
-    <div class="flex flex-col lg:flex lg:justify-between">
+    <div class="flex flex-col lg:flex lg:justify-between text-center">
       <h1 class="font-bold text-2xl mb-10">Dashboard</h1>
       <button
         @click="logout"
